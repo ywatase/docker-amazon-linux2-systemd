@@ -4,7 +4,7 @@ FROM amazonlinux:latest
 
 ENV container docker
 
-RUN rpm --rebuilddb && yum install -y systemd
+RUN rpm --rebuilddb && yum install -y systemd \
   && rm -rf /var/cache/yum/* \
   && yum clean all
 
